@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="theme-color" content="#e9f5fa">
+<title>Riliv · Ruang jeda</title>
+<style>
+*{box-sizing:border-box} :root{--ink:#18344b;--muted:#536d7c;--blue:#146e97;--wash:#e5f3f8;--line:#dce9ee;--bg:#f5fafb;--white:#fff;--nav:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 'Segoe UI',system-ui,sans-serif}button,input,textarea,select{font:inherit;color:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #3e91b7;outline-offset:3px}h1,h2,h3,p{margin:0}h1{font-size:clamp(29px,5vw,44px);letter-spacing:-1.7px;line-height:1.1}h2{font-size:21px;line-height:1.3;letter-spacing:-.4px}h3{font-size:15px;line-height:1.35}p,small{color:var(--muted)}small{font-size:12px}.shell{max-width:1060px;margin:auto;padding:0 25px calc(var(--nav) + 30px)}.top{display:flex;align-items:center;justify-content:space-between;padding:23px 0;gap:14px}.brand{display:flex;align-items:center;gap:10px;font-size:28px;letter-spacing:-1px;font-weight:800}.brand i{background:var(--blue);color:white;font-style:normal;width:36px;height:36px;display:grid;place-items:center;border-radius:13px;font-size:25px}.top span,.pill{background:#e8f4f7;color:#27617b;border-radius:20px;padding:5px 11px;font-size:11px;font-weight:650;white-space:nowrap}.hero{position:relative;isolation:isolate;overflow:hidden;border-radius:24px;background:#dceff7;min-height:235px;display:flex;align-items:center;padding:35px;margin-bottom:20px}.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#dceff7 34%,#dceff700 72%);z-index:-1}.hero-art{position:absolute;inset:0 0 0 auto;width:67%;height:100%;z-index:-2}.hero-copy{max-width:56%}.hero p{margin-top:10px;max-width:330px}.eyebrow{display:block;color:#1a688a;font-size:10px;letter-spacing:1.7px;font-weight:750;margin-bottom:8px}.grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:17px;align-items:start}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:16px;min-width:0}.card h2+p,.card h3+p{margin-top:6px}.title-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.moods{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:15px}.mood{background:#f5fafb;border:1px solid var(--line);border-radius:11px;min-height:76px;padding:7px 3px;font-size:10px;line-height:1.25}.mood b{display:block;font-size:24px;margin-bottom:6px}.mood.active,.chip.active{background:#dceff7;border-color:#82b9d0;color:#135d7d;font-weight:700}.btn,.chip{border:1px solid transparent;border-radius:10px;font-size:13px;font-weight:650;padding:9px 15px;min-height:40px}.btn{background:var(--blue);color:#fff}.btn.alt,.chip{background:#f3f9fb;color:#155878;border-color:var(--line)}.btn.danger{background:#fbeeee;color:#8c3542}.btn:disabled{opacity:.5;cursor:default}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px;align-items:center}.section-head{margin:10px 0 19px}.section-head p{margin-top:7px}.list{display:grid;gap:10px}.item{display:flex;align-items:center;gap:13px;border:1px solid var(--line);padding:12px;border-radius:13px;background:white;text-align:left;width:100%}.item>div:nth-child(2){flex:1;min-width:0}.item small{display:block;margin-top:3px}.tile{width:45px;height:45px;border-radius:12px;background:#e1f0f8;display:grid;place-items:center;font-size:22px;flex-shrink:0}.tile.lilac{background:#eee9f7}.tile.green{background:#e8f2e7}.arrow{margin-left:auto;color:var(--blue);font-weight:700}.note{margin-top:13px;background:#eef6f9;border-radius:11px;padding:11px 13px;font-size:12px;color:#365a6d}.note.warm{background:#f9f0e6;color:#694e39}.empty{padding:20px;border:1px dashed #bfd4dc;border-radius:11px;color:var(--muted);font-size:13px;text-align:center}.nav{position:fixed;z-index:5;inset:auto 0 0;background:#fffffffa;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -5px 25px #18344b09}.nav-inner{height:var(--nav);max-width:780px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:center;gap:5px;padding:4px 9px}.nav button{display:grid;place-items:center;gap:4px;border:0;border-radius:13px;background:transparent;padding:7px 3px;font-size:11px;color:#456276}.nav button.active{background:#e6f4f9;color:#11658b;font-weight:750}.nav svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}.footer{margin-top:12px;padding-top:13px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}label{display:block;font-size:13px;font-weight:650;margin-bottom:5px}input,textarea,select{width:100%;min-height:42px;padding:9px 10px;background:#fff;border:1px solid #bdd2dd;border-radius:9px}textarea{resize:vertical;min-height:122px}.field{margin-bottom:13px}.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}.chips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 14px}.chip{padding:6px 12px;min-height:34px}.journal-entry{border-top:1px solid var(--line);padding:12px 0}.journal-entry p{white-space:pre-wrap;overflow-wrap:anywhere;margin:6px 0}.journal-entry h3{overflow-wrap:anywhere}.journal-entry small{display:block}.meter{width:100%;height:8px;display:block;appearance:none;border:0;border-radius:20px;background:#dfedf3;overflow:hidden;margin-top:10px}.meter::-webkit-progress-bar{background:#dfedf3}.meter::-webkit-progress-value{background:#3c93b6;border-radius:20px}.meter::-moz-progress-bar{background:#3c93b6}.step{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.step b{display:grid;place-items:center;width:30px;height:30px;flex-shrink:0;border-radius:50%;background:#dceff7;color:#125b7b}.step p{font-size:13px}.timer{font-size:48px;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-2px;margin:12px 0}.session{background:#edf7fa}.session .prompt{font-size:15px;margin-top:10px}.check{display:flex;align-items:center;gap:8px;font-weight:500}.check input{width:16px;min-height:16px;accent-color:var(--blue)}dialog{width:min(540px,calc(100% - 26px));max-height:88vh;border:1px solid var(--line);border-radius:18px;padding:21px;color:var(--ink)}dialog::backdrop{background:#16324e60}dialog h2{margin-bottom:8px}dialog .actions{margin-bottom:12px}#toast{position:fixed;bottom:calc(var(--nav) + 15px);z-index:10;left:50%;transform:translateX(-50%);border-radius:10px;background:#18344b;color:white;padding:10px 16px;width:max-content;max-width:90vw;font-size:13px}#toast:empty{display:none}
+@media(max-width:700px){.shell{padding-inline:14px}.top{padding:15px 0}.hero{min-height:200px;padding:22px}.hero-copy{max-width:67%}.hero p{font-size:13px}.hero-art{width:82%}.hero::after{background:linear-gradient(90deg,#dceff7 38%,#dceff700 100%)}.grid{grid-template-columns:minmax(0,1fr)}.card{padding:16px}.nav button{font-size:10px}.cols{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div class="shell"><header class="top"><div class="brand"><i aria-hidden="true">✓</i>riliv</div><span>PROTOTIPE LOKAL</span></header><main id="app"></main><footer class="footer"><span>Sevti Mulia Ningsih · 243301631029</span><span>Prototipe tugas independen · Data contoh</span></footer></div>
+<nav class="nav" aria-label="Menu utama"><div class="nav-inner" id="nav"></div></nav>
+<div id="toast" role="status"></div>
+<dialog id="modal" aria-labelledby="dialog-title"><div id="dialog-body"></div><button class="btn alt" id="close">Tutup</button></dialog>
+<noscript>Aktifkan JavaScript untuk membuka prototipe lokal ini.</noscript>
+<script>
+'use strict';
+const $ = selector => document.querySelector(selector);
+const safe = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const key = 'sevti.riliv.local.v1';
+const empty = () => ({moods:{}, journal:[], progress:{}, journey:{}, bookings:[], reminder:'', session:null});
+let storage, state = empty(), storageIssue = false;
+try {
+  storage = window.localStorage;
+  const saved = JSON.parse(storage.getItem(key));
+  if (saved) state = {...state, ...saved};
+} catch { storageIssue = true; }
+let page = 'home', medFilter = 'Semua', journalFilter = 'Semua', service = 'Plus', wizard = 1, draft = {};
+let toastTimeout, reminderShown = '';
+const moodNames = ['Sangat buruk','Buruk','Netral','Baik','Sangat baik'];
+const faces = ['😞','😕','😐','🙂','😄'];
+const localDate = (d = new Date()) => [d.getFullYear(), String(d.getMonth()+1).padStart(2,'0'), String(d.getDate()).padStart(2,'0')].join('-');
+const today = () => localDate();
+const dateLabel = day => new Date(day+'T12:00:00').toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'});
+const minutes = value => String(Math.floor(value/60)).padStart(2,'0') + ':' + String(value%60).padStart(2,'0');
+const tabs = [
+  ['home','Home','<path d="m3 10 9-7 9 7v10h-6v-6H9v6H3z"/>'],
+  ['med','Meditasi','<path d="M12 20c-5 0-9-3-9-8 4 0 7 2 9 5 2-3 5-5 9-5 0 5-4 8-9 8Zm0-4c-4-3-4-7 0-11 4 4 4 8 0 11Z"/>'],
+  ['counsel','Konseling','<path d="M20 11a7 7 0 0 1-7 7H8l-5 3v-6a7 7 0 0 1 6-11h4a7 7 0 0 1 7 7Z"/><path d="M8 11h8"/>'],
+  ['journal','Journal','<rect x="5" y="3" width="15" height="18" rx="2"/><path d="M8 3v18m3-13h6m-6 4h6m-6 4h4"/>'],
+  ['journey','Journey','<path d="M5 21V4m0 1h14l-3 4 3 4H5"/>']
+];
+const meditations = [
+  {id:'awal',name:'Belajar meditasi, yuk!',group:'Dasar',seconds:60,emoji:'🌿',desc:'Sesi pengenalan singkat.',prompts:['Cari posisi yang nyaman. Kamu boleh tetap membuka mata.','Perhatikan suara di sekitar tanpa harus mengubah apa pun.','Saat siap, alihkan perhatian kembali ke ruangan.']},
+  {id:'nuansa',name:'Nuansa lelap',group:'Tidur',seconds:90,emoji:'🌙',desc:'Bayangkan suasana malam yang tenang.',prompts:['Bayangkan lampu temaram di sudut ruangan.','Perhatikan suasana di sekitarmu.','Akhiri sesi saat kamu merasa siap.']},
+  {id:'cerita',name:'Cerita lelap',group:'Tidur',seconds:90,emoji:'📖',desc:'Cerita pendek · jendela di tepi danau.',prompts:['Di ujung jalan ada sebuah rumah kecil dengan jendela menghadap danau.','Angin melintas pelan, dan permukaan danau memantulkan cahaya dari jendela.','Lampu di rumah itu perlahan padam. Malam pun berlanjut dengan tenang.']},
+  {id:'musik',name:'Musik lelap',group:'Tidur',seconds:90,emoji:'♫',desc:'Nada ambient lembut, opsional.',prompts:['Jika ingin, nyalakan nada ambient dengan volume rendah.','Dengarkan nada yang lewat. Kamu bisa mematikan suara kapan saja.','Sesi hampir selesai. Luangkan waktu sebelum berpindah kegiatan.']},
+  {id:'puisi',name:'Puisi lelap',group:'Tidur',seconds:60,emoji:'✦',desc:'Puisi pendek untuk dibaca pelan.',prompts:['Sore turun di sela ranting.','Langit menyimpan sisa terang.','Malam tiba, membawa ruang untuk jeda.']},
+  {id:'fokus',name:'Satu hal pada satu waktu',group:'Fokus',seconds:60,emoji:'☀',desc:'Amati satu benda di sekitarmu.',prompts:['Pilih satu benda di dekatmu.','Amati bentuk dan warnanya.','Pikirkan satu kegiatan sederhana yang ingin kamu lanjutkan.']}
+];
+const topics = {
+  'Kenali diri lebih baik':'Apa satu hal tentang diriku yang kusadari hari ini?',
+  'Menjalin relasi':'Percakapan mana yang paling kuingat hari ini, dan apa yang membuatnya berkesan?',
+  'Hal kecil hari ini':'Tulis satu momen sederhana yang ingin kamu ingat.',
+  'Jurnal bebas':'Tulis hal apa pun yang ingin kamu catat.'
+};
+const journeys = [
+  {id:'diri',name:'Menerima diri',emoji:'💙',prompts:['Sebutkan satu hal yang kamu hargai dari dirimu hari ini.','Tulis satu kalimat yang ingin kamu ucapkan kepada dirimu dengan lebih ramah.','Pilih satu kebiasaan kecil yang ingin kamu pertahankan.']},
+  {id:'pikiran',name:'Mengenali pikiran yang berulang',emoji:'🌿',prompts:['Jika ada pikiran yang muncul berulang, tulis topiknya dengan singkat.','Pilih satu bagian yang bisa kamu tindak lanjuti dan catat langkah kecil yang mungkin dilakukan.']}
+];
+const scene = '<svg class="hero-art" viewBox="0 0 550 255" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="550" height="255" fill="#ccebf6"/><circle cx="413" cy="78" r="29" fill="#fff0bd"/><path d="M0 177Q123 145 220 182Q299 107 372 163Q470 74 550 153V255H0Z" fill="#8bb9c7"/><path d="M0 201Q109 167 224 199Q338 138 426 195Q478 143 550 188V255H0Z" fill="#78a7ae"/><path d="M0 224Q111 196 217 226Q354 178 465 219Q500 204 550 211V255H0Z" fill="#abd7cf"/><path d="M361 217q25-14 62-11m-35 17q28-8 62-7m-136 23q46-11 90-9" fill="none" stroke="#d8efdf" stroke-width="3" stroke-linecap="round"/></svg>';
+function notify(message) {
+  $('#toast').textContent = message;
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => { $('#toast').textContent = ''; }, 4300);
+}
+function save(change) {
+  if (storageIssue) { notify('Penyimpanan browser tidak tersedia. Buka dengan Chrome atau Edge biasa.'); return false; }
+  const next = JSON.parse(JSON.stringify(state));
+  change(next);
+  try { storage.setItem(key, JSON.stringify(next)); }
+  catch { notify('Catatan gagal disimpan. Periksa ruang penyimpanan browser.'); return false; }
+  state = next;
+  return true;
+}
+function showDialog(content) {
+  const dialog = $('#modal');
+  if (dialog.open) dialog.close();
+  $('#dialog-body').innerHTML = content;
+  dialog.showModal();
+}
+function navigate(target) {
+  page = target;
+  render();
+  window.scrollTo(0,0);
+}
+function title(eye, name, summary) {
+  return `<div class="section-head"><span class="eyebrow">${eye}</span><h1>${name}</h1><p>${summary}</p></div>`;
+}
+function item(emoji,name,desc,attr) {
+  return `<button class="item" ${attr}><div class="tile" aria-hidden="true">${emoji}</div><div><h3>${name}</h3><small>${desc}</small></div><span class="arrow" aria-hidden="true">›</span></button>`;
+}
+function meter(value,max,label) { return `<progress class="meter" value="${value}" max="${max}" aria-label="${label}"></progress>`; }
+function home() {
+  const mood = state.moods[today()];
+  const recent = Object.keys(state.moods).sort().reverse().slice(0,5);
+  const current = meditations.find(m => m.id === state.session?.id) || meditations[0];
+  const played = elapsed(current);
+  return `<section class="hero">${scene}<div class="hero-copy"><span class="eyebrow">RUANG UNTUK JEDA</span><h1>Hai, Sevti!</h1><p>${dateLabel(today())}. Luangkan satu momen untuk melihat bagaimana kabarmu hari ini.</p></div></section>
+  <div class="grid"><div><section class="card"><h2>Bagaimana perasaanmu hari ini?</h2><p><small>Pilih satu suasana hati. Kamu bisa memperbaruinya kapan saja hari ini.</small></p><div class="moods">${moodNames.map((name,i)=>`<button class="mood ${mood===i?'active':''}" data-mood="${i}" aria-pressed="${mood===i}"><b aria-hidden="true">${faces[i]}</b>${name}</button>`).join('')}</div>${recent.length?`<div class="note"><strong>Check-in terakhir</strong><br>${recent.map(day=>`${dateLabel(day)} · ${moodNames[state.moods[day]]}`).join('<br>')}</div>`:''}</section>
+  <section class="card"><div class="title-row"><h2>Layanan Riliv</h2></div><div class="list">${item('🌿','Meditasi','Pilih sesi singkat atau relaksasi tidur.','data-page="med"')}${item('📝','Journal','Tulis pengalaman dan lihat riwayat.','data-page="journal"')}${item('🏞️','Journey','Lanjutkan aktivitas refleksi.','data-page="journey"')}</div></section></div>
+  <aside><section class="card"><h2>Lanjutkan meditasimu</h2><p>${current.name} · ${minutes(played)} / ${minutes(current.seconds)}</p>${meter(played,current.seconds,'Kemajuan meditasi')}<div class="actions"><button class="btn" data-session="${current.id}">${played>0?'Buka sesi':'Pilih sesi'}</button></div></section>
+  <section class="card"><h2>Konseling instan</h2><p>Kenali alur layanan lewat contoh pemesanan.</p><div class="actions"><button class="btn alt" data-action="instant">Chat sekarang · demo</button></div></section>
+  <div class="note warm">Gunakan contoh fiktif saat mengisi jurnal dan check-in. Catatan tersimpan di browser perangkat ini.</div></aside></div>`;
+}
+function elapsed(m) {
+  const session = state.session?.id === m.id ? state.session : null;
+  const value = session ? session.seconds + (session.started ? Math.max(0,(Date.now()-session.started)/1000) : 0) : state.progress[m.id] || 0;
+  return Math.min(m.seconds, Math.floor(value));
+}
+function sessionView(m) {
+  const n = elapsed(m), running = state.session?.id === m.id && !!state.session.started && n<m.seconds;
+  return `<section class="card session"><span class="eyebrow">SESI MEDITASI</span><h2>${m.name}</h2><div class="timer" id="timer">${minutes(n)} / ${minutes(m.seconds)}</div>${meter(n,m.seconds,'Waktu meditasi')}<p class="prompt" id="med-prompt">${m.prompts[Math.min(2,Math.floor(n/m.seconds*3))]}</p><div class="actions"><button class="btn" data-action="toggle-session">${running?'Jeda':n===m.seconds?'Ulangi sesi':n?'Lanjutkan':'Mulai sesi'}</button><button class="btn alt" data-action="ambient">${sound?'Matikan nada':'Nyalakan nada'}</button></div><p><small>Nada ambient dibuat di perangkat. Suara berhenti saat meninggalkan menu.</small></p></section>`;
+}
+function med() {
+  const current = meditations.find(m=>m.id===state.session?.id);
+  return title('WAKTU UNTUK DIRIMU','Meditasi','Pilih aktivitas singkat dan lanjutkan sesuai waktumu.')+`<div class="grid"><div>${current?sessionView(current):''}<section class="card"><h2 style="margin-bottom:12px">Topik meditasi untukmu</h2><div class="chips">${['Semua','Dasar','Tidur','Fokus'].map(f=>`<button class="chip ${medFilter===f?'active':''}" data-med-filter="${f}" aria-pressed="${medFilter===f}">${f}</button>`).join('')}</div><div class="list">${meditations.filter(m=>medFilter==='Semua'||m.group===medFilter).map(m=>item(m.emoji,m.name,`${minutes(m.seconds)} · ${m.desc}${state.progress[m.id]===m.seconds?' · Selesai':''}`,`data-session="${m.id}"`)).join('')}</div></section></div>
+  <aside><section class="card"><h2>Ingatkan untuk meditasi</h2><p><small>Pengingat tampil ketika halaman sedang terbuka.</small></p><form id="reminder-form" style="margin-top:13px"><div class="field"><label for="reminder">Waktu pengingat</label><input id="reminder" name="reminder" type="time" required value="${safe(state.reminder)}"></div><div class="actions"><button class="btn" type="submit">Simpan</button>${state.reminder?'<button class="btn alt" type="button" data-action="clear-reminder">Nonaktifkan</button>':''}</div></form></section></aside></div>`;
+}
+const services = {Instan:'Contoh alur permintaan sesi cepat melalui chat.', Plus:'Contoh memilih psikolog dan membuat jadwal.', Pasangan:'Contoh mengatur satu sesi bersama pasangan.', Offline:'Contoh memilih jadwal tatap muka di lokasi fiktif.'};
+function counsel() {
+  return title('ALUR LAYANAN','Konseling','Jelajahi cara memilih layanan dan membuat jadwal simulasi.')+`<div class="grid"><div><section class="card"><div class="chips">${Object.keys(services).map(s=>`<button class="chip ${s===service?'active':''}" data-service="${s}" aria-pressed="${s===service}">${s}</button>`).join('')}</div><h2>Konseling ${service}</h2><p>${services[service]}</p><div class="actions"><button class="btn" data-action="book">Jadwalkan sekarang · demo</button></div></section>
+  <section class="card"><h2>Alur konseling</h2>${[['Pilih topik','Pilih topik contoh yang ingin dibahas.'],['Atur detail layanan','Pilih psikolog fiktif, metode, durasi, dan jumlah sesi.'],['Konfirmasi jadwal','Pilih tanggal dan waktu. Selesaikan langkah pembayaran simulasi.']].map(([h,p],i)=>`<div class="step"><b>${i+1}</b><div><h3>${h}</h3><p>${p}</p></div></div>`).join('')}</section></div>
+  <aside><section class="card"><h2>Jadwal simulasi</h2>${state.bookings.length?state.bookings.slice().reverse().map(b=>`<div class="journal-entry"><h3>${safe(b.ref)} · ${safe(b.service)}</h3><p>${safe(b.topic)} · ${dateLabel(b.date)} · ${safe(b.time)}</p><small>${safe(b.method)} · ${safe(b.count)} sesi · ${safe(b.duration)} menit</small></div>`).join(''):'<div class="empty" style="margin-top:12px">Belum ada jadwal simulasi.</div>'}<div class="note">Semua jadwal, nama psikolog, dan pembayaran di sini adalah data demonstrasi.</div></section></aside></div>`;
+}
+function options(values,chosen) { return values.map(v=>`<option ${v===chosen?'selected':''}>${safe(v)}</option>`).join(''); }
+function booking() {
+  const forms = [
+    `<div class="field"><label for="btopic">Topik contoh</label><select id="btopic" name="topic">${options(['Studi dan pekerjaan','Relasi','Keseharian'],draft.topic)}</select></div>`,
+    `<div class="cols"><div class="field"><label for="bpro">Psikolog fiktif</label><select id="bpro" name="psychologist">${options(['Psikolog Demo A','Psikolog Demo B'],draft.psychologist)}</select></div><div class="field"><label for="bmethod">Metode</label><select id="bmethod" name="method">${options(service==='Offline'?['Tatap muka · lokasi contoh']:service==='Instan'?['Chat']:['Chat','Panggilan video'],draft.method)}</select></div><div class="field"><label for="bduration">Durasi (menit)</label><select id="bduration" name="duration">${options(['30','45','60'],draft.duration)}</select></div><div class="field"><label for="bcount">Jumlah sesi</label><select id="bcount" name="count">${options(['1','2','3'],draft.count)}</select></div></div>`,
+    `<div class="note" style="margin-bottom:14px">${safe(draft.topic)} · ${safe(draft.psychologist)} · ${safe(draft.method)} · ${safe(draft.count)} sesi</div><div class="cols"><div class="field"><label for="bdate">Tanggal contoh</label><input type="date" id="bdate" name="date" min="${today()}" value="${safe(draft.date||today())}" required></div><div class="field"><label for="btime">Slot contoh</label><select id="btime" name="time">${options(['09:00','11:00','14:00','16:00'],draft.time)}</select></div></div><label class="check"><input type="checkbox" required> Saya memilih pembayaran simulasi Rp0.</label>`
+  ];
+  showDialog(`<span class="eyebrow">LANGKAH ${wizard} DARI 3 · ${service.toUpperCase()}</span><h2 id="dialog-title">${['Pilih topik','Atur layanan','Konfirmasi jadwal'][wizard-1]}</h2><form id="booking-form">${forms[wizard-1]}<div class="actions">${wizard>1?'<button type="button" class="btn alt" data-action="book-back">Kembali</button>':''}<button class="btn" type="submit">${wizard===3?'Simpan simulasi':'Lanjut'}</button></div></form>`);
+  $('#booking-form').onsubmit = event => {
+    event.preventDefault();
+    Object.assign(draft,Object.fromEntries(new FormData(event.target)));
+    if (wizard < 3) { wizard++; booking(); return; }
+    const ref = 'DEMO-' + String(state.bookings.length+1).padStart(3,'0');
+    if (save(next=>next.bookings.push({...draft,ref,service}))) {
+      $('#modal').close(); render(); notify('Jadwal simulasi tersimpan · '+ref);
+    }
+  };
+}
+function journal() {
+  const week = new Date();
+  week.setDate(week.getDate()-6);
+  const entries = state.journal.filter(e=>journalFilter==='Semua'||journalFilter==='Hari ini'&&e.day===today()||journalFilter==='7 hari'&&e.day>=localDate(week)||journalFilter==='Favorit'&&e.favorite);
+  return title('CATATAN PRIBADI','Journal','Tulis apa yang kamu rasakan atau pilih satu pertanyaan untuk memulai.')+`<div class="grid"><section class="card"><div class="title-row"><h2>Riwayat journal</h2><button class="btn" data-action="write">+ Tulis jurnal</button></div><div class="chips">${['Semua','Hari ini','7 hari','Favorit'].map(f=>`<button class="chip ${journalFilter===f?'active':''}" data-journal-filter="${f}" aria-pressed="${journalFilter===f}">${f}</button>`).join('')}</div>${entries.length?entries.map(e=>`<article class="journal-entry"><small>${dateLabel(e.day)} · ${safe(e.topic)}</small><h3>${safe(e.title)}</h3><p>${safe(e.body)}</p><div class="actions"><button class="btn alt" data-favorite="${e.id}" aria-pressed="${e.favorite}">${e.favorite?'★ Favorit':'☆ Favorit'}</button><button class="btn alt" data-edit="${e.id}">Edit</button><button class="btn danger" data-remove="${e.id}">Hapus</button></div></article>`).join(''):'<div class="empty">Belum ada jurnal pada tampilan ini.</div>'}</section><aside><section class="card"><h2 style="margin-bottom:12px">Topik journal</h2><div class="list">${Object.keys(topics).slice(0,3).map((topic,i)=>item(['🌱','💬','☀'][i],topic,topics[topic],`data-topic="${safe(topic)}"`)).join('')}</div></section></aside></div>`;
+}
+function write(topic='Jurnal bebas',existing=null) {
+  showDialog(`<span class="eyebrow">${safe(topic)}</span><h2 id="dialog-title">${existing?'Edit jurnal':'Tulis jurnal'}</h2><p style="margin-bottom:13px">${topics[topic]}</p><form id="journal-form"><div class="field"><label for="jtitle">Judul</label><input id="jtitle" name="title" maxlength="90" required value="${safe(existing?.title)}"></div><div class="field"><label for="jbody">Isi jurnal</label><textarea id="jbody" name="body" maxlength="3000" required>${safe(existing?.body)}</textarea></div><div class="note">Gunakan catatan fiktif untuk demonstrasi tugas.</div><div class="actions"><button class="btn" type="submit">Simpan jurnal</button></div></form>`);
+  $('#journal-form').onsubmit = event => {
+    event.preventDefault();
+    const form = new FormData(event.target), title = form.get('title').trim(), body = form.get('body').trim();
+    if (!title || !body) { notify('Isi judul dan catatan terlebih dahulu.'); return; }
+    const entry = {...existing, title, body, topic, id:existing?.id || Date.now().toString(36), day:existing?.day || today(), favorite:existing?.favorite || false};
+    if (save(next=>{ if (existing) next.journal = next.journal.map(e=>e.id===existing.id?entry:e); else next.journal.unshift(entry); })) {
+      $('#modal').close(); journalFilter='Semua'; render(); notify('Jurnal tersimpan.');
+    }
+  };
+}
+function journey() {
+  return title('REFLEKSI BERTAHAP','Journey','Selesaikan satu bagian sebelum melanjutkan ke bagian berikutnya.')+`<div class="grid">${journeys.map(j=>{const done=(state.journey[j.id]||[]).length;return `<section class="card"><div class="title-row"><div class="tile" aria-hidden="true">${j.emoji}</div><span class="pill">${done} / ${j.prompts.length} bagian</span></div><h2>${j.name}</h2>${meter(done,j.prompts.length,'Progres journey')}${j.prompts.map((prompt,i)=>`<div class="step"><b>${i<done?'✓':i+1}</b><div><h3>Bagian ${i+1}</h3><p>${i>done?'Selesaikan bagian sebelumnya.':prompt}</p>${i<=done?`<button class="btn alt" style="margin-top:6px" data-reflect="${j.id}:${i}">${i<done?'Lihat refleksi':'Mulai refleksi'}</button>`:''}</div></div>`).join('')}</section>`;}).join('')}</div>`;
+}
+function reflect(id, i) {
+  const j = journeys.find(x=>x.id===id), notes=state.journey[id]||[];
+  if (!j || i>notes.length || i>=j.prompts.length) return;
+  showDialog(`<span class="eyebrow">BAGIAN ${i+1}</span><h2 id="dialog-title">${j.name}</h2><p style="margin-bottom:13px">${j.prompts[i]}</p><form id="reflect-form"><div class="field"><label for="reflection">Catatan refleksi contoh</label><textarea id="reflection" name="reflection" maxlength="1500" required>${safe(notes[i])}</textarea></div><div class="actions"><button class="btn" type="submit">${i<notes.length?'Simpan perubahan':'Selesaikan bagian'}</button></div></form>`);
+  $('#reflect-form').onsubmit = event => {
+    event.preventDefault();
+    const answer = new FormData(event.target).get('reflection').trim();
+    if (!answer) { notify('Isi catatan refleksi terlebih dahulu.'); return; }
+    if (save(next=>{ next.journey[id] ||= []; next.journey[id][i]=answer; })) {
+      $('#modal').close(); render(); notify('Refleksi tersimpan.');
+    }
+  };
+}
+let sound;
+function stopSound() {
+  if (!sound) return;
+  sound.close().catch(()=>{});
+  sound = undefined;
+}
+async function startSound() {
+  try {
+    sound = new AudioContext();
+    const ctx = sound, gain = ctx.createGain();
+    gain.gain.value = .025;
+    gain.connect(ctx.destination);
+    [146.83,220,293.66].forEach((hz,i)=>{
+      const tone = ctx.createOscillator(), vol=ctx.createGain();
+      tone.frequency.value = hz;
+      vol.gain.value = .32/(i+1);
+      tone.connect(vol).connect(gain);
+      tone.start();
+    });
+    await ctx.resume();
+  } catch { stopSound(); notify('Nada ambient tidak tersedia di browser ini.'); }
+  render();
+}
+function pauseSession() {
+  const m = meditations.find(x=>x.id===state.session?.id);
+  if (!m || !state.session.started) return true;
+  const played = elapsed(m);
+  return save(next=>{next.progress[m.id]=played; next.session={id:m.id,seconds:played,started:null};});
+}
+function render() {
+  $('#nav').innerHTML = tabs.map(([id,label,path])=>`<button class="${page===id?'active':''}" data-page="${id}" ${page===id?'aria-current="page"':''}><svg viewBox="0 0 24 24" aria-hidden="true">${path}</svg>${label}</button>`).join('');
+  $('#app').innerHTML = ({home,med,counsel,journal,journey})[page]();
+  if (storageIssue) $('#app').insertAdjacentHTML('afterbegin','<div class="note warm">Penyimpanan browser tidak dapat dibaca. Tampilan bisa dijelajahi. Buka dengan Chrome atau Edge biasa untuk mencoba menyimpan.</div>');
+  if ($('#reminder-form')) $('#reminder-form').onsubmit = event => {
+    event.preventDefault();
+    const time = new FormData(event.target).get('reminder');
+    if (save(next=>{next.reminder=time;})) { reminderShown=''; render(); notify('Pengingat disetel pukul '+time+'.'); }
+  };
+}
+$('#close').onclick = () => $('#modal').close();
+document.addEventListener('click',event=>{
+  const d = event.target.closest('button')?.dataset;
+  if (!d) return;
+  if (d.page) {
+    if (page==='med' && d.page!=='med') { if (!pauseSession()) return; stopSound(); }
+    navigate(d.page);
+  }
+  if (d.mood!==undefined && save(next=>{next.moods[today()]=Number(d.mood);})) {render();notify('Suasana hati tersimpan.');}
+  if (d.medFilter) { medFilter=d.medFilter; render(); }
+  if (d.journalFilter) { journalFilter=d.journalFilter; render(); }
+  if (d.service) { service=d.service; render(); }
+  if (d.session) {
+    const m=meditations.find(x=>x.id===d.session);
+    if (m && state.session?.id!==m.id) {
+      if (!pauseSession()) return;
+      stopSound();
+      if (!save(next=>{next.session={id:m.id,seconds:next.progress[m.id]||0,started:null};})) return;
+    }
+    navigate('med');
+    $('.session')?.scrollIntoView({block:'nearest'});
+  }
+  if (d.action==='toggle-session') {
+    const m=meditations.find(x=>x.id===state.session?.id);
+    if (!m) return;
+    if (state.session.started) {pauseSession();stopSound();}
+    else save(next=>{const played=elapsed(m);next.session={id:m.id,seconds:played===m.seconds?0:played,started:Date.now()};next.progress[m.id]=next.session.seconds;});
+    render();
+  }
+  if (d.action==='ambient') { if (sound) {stopSound();render();} else startSound(); }
+  if (d.action==='clear-reminder' && save(next=>{next.reminder='';})) render();
+  if (d.action==='instant') { service='Instan'; navigate('counsel'); wizard=1; draft={}; booking(); }
+  if (d.action==='book') { wizard=1; draft={}; booking(); }
+  if (d.action==='book-back') { Object.assign(draft,Object.fromEntries(new FormData($('#booking-form')))); wizard--; booking(); }
+  if (d.action==='write') write();
+  if (d.topic) write(d.topic);
+  if (d.edit) {const entry=state.journal.find(e=>e.id===d.edit); if(entry) write(entry.topic,entry);}
+  if (d.favorite && save(next=>{const e=next.journal.find(x=>x.id===d.favorite);if(e)e.favorite=!e.favorite;})) render();
+  if (d.remove) showDialog(`<h2 id="dialog-title">Hapus jurnal ini?</h2><p>Catatan akan dihapus dari riwayat di browser ini.</p><div class="actions"><button class="btn danger" data-confirm-remove="${safe(d.remove)}">Hapus jurnal</button></div>`);
+  if (d.confirmRemove && save(next=>{next.journal=next.journal.filter(e=>e.id!==d.confirmRemove);})) {$('#modal').close();render();notify('Jurnal dihapus.');}
+  if (d.reflect) {const [id,index]=d.reflect.split(':'); reflect(id,Number(index));}
+});
+setInterval(()=>{
+  const m = meditations.find(x=>x.id===state.session?.id), timer = $('#timer');
+  if (m && timer && state.session.started) {
+    const n=elapsed(m);
+    timer.textContent=minutes(n)+' / '+minutes(m.seconds);
+    $('.session progress').value=n;
+    $('#med-prompt').textContent=m.prompts[Math.min(2,Math.floor(n/m.seconds*3))];
+    if (n===m.seconds && pauseSession()) {stopSound();render();notify('Sesi meditasi selesai.');}
+  }
+  const date=new Date(), time=date.toTimeString().slice(0,5), marker=today()+time;
+  if (state.reminder===time && reminderShown!==marker) {
+    reminderShown=marker; notify('Pengingat meditasi · waktunya mengambil jeda.');
+  }
+},1000);
+render();
+</script>
+</body>
+</html>
